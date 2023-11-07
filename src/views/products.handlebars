@@ -1,0 +1,19 @@
+<div>
+    {{#each products}}
+    <p>{{this.title}}</p>
+    <p>{{this.description}}</p>
+    <p>{{this.code}}</p>
+    <p>{{this.price}}</p>
+    <p>{{this.status}}</p>
+    <p>{{this.stock}}</p>
+    <p>{{this.category}}</p>
+    <p>{{this.image}}</p>
+    <a href="/product/{{this.id}}"><button>Detalle</button></a>
+    {{/each}}
+    {{#if hasPrevPage}}
+    <a href="/products?page={{prevPage}}"><button>Anterior</button></a>
+    {{/if}}
+    {{#if hasNextPage}}
+    <a href="/products?page={{nextPage}}"><button>Siguiente</button></a>
+    {{/if}}
+</div>
